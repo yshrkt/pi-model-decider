@@ -1,0 +1,26 @@
+{
+  "enabled": false,
+  "classifier": {
+    "provider": "typesafe",
+    "model": "jev-latest",
+    "timeoutMs": 5000
+  },
+  "selectionHint": "現在のプロファイルで十分なら維持する。通常の実装はstandard、複雑な設計や原因調査はdeepを選ぶ。",
+  "mode": "selective",
+  "profiles": [
+    {
+      "id": "standard",
+      "model": { "provider": "your-provider", "id": "your-model" },
+      "thinking": "medium",
+      "hint": "通常の実装、修正、質問。",
+      "ask": false
+    },
+    {
+      "id": "deep",
+      "model": { "provider": "your-provider", "id": "your-model" },
+      "thinking": "high",
+      "hint": "複雑な設計、原因の分からない不具合、慎重な検討。",
+      "ask": true
+    }
+  ]
+}
